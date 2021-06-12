@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\RsController;
+use App\Http\Controllers\PasienController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('kamar0006', RsController::class);
+Route::resource('pasien0006', PasienController::class);
+Route::get('pasien_import0006', [PasienController::class, 'formimport']);
+Route::post("pasien_import0006", [PasienController::class, 'import'])->name("pasien.import");

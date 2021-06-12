@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pasien;
 use Illuminate\Http\Request;
-use App\Http\Imports\PasienImport;
+use App\Imports\PasienImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 
